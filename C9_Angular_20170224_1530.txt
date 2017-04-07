@@ -1,0 +1,42 @@
++--------------+
+| c9 - Angular |
++--------------+
+
+-> Aggiorname node <- (versione 6.10.0 al 14/2/2017)
+
+nvm install 6 (installare versione 6 di node)
+nvm alias default 6
+node -v
+
+-> Aggiornare npm <- (versione 4.3.0 al 14/02/2017)
+
+npm install -g npm
+npm -v
+
+-> Installare Angular-CLI <- (versione 1.0.0-beta.32.3 al 14/02/2017)
+npm install -g @angular/cli
+ng -v
+
+
+-> Creare applicazione <-
+
+ng new my-ap
+cd my-app
+ng-serve
+
+Sostituire "ng serve" con "ng serve --host 0.0.0.0 --port 8080" !!!!
+
+"ng build --env=prod" crea nella cartella "dist il codice che va rilasciato in prod"
+
+--> Per usare "angular-in-memory-web-api":
+npm install angular-in-memory-web-api --save
+...ed inserire in package.jons in "devDependencies":
+"angular-in-memory-web-api": "^0.2.0"
+
+-->Install Angular Material components
+   npm install --save @angular/material
+
+-->Install Bootstrap
+npm install --save @ng-bootstrap/ng-bootstrap
+
+pi scaricare css ed inserirlo tramite @import in app/styles.css
