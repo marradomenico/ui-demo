@@ -1,0 +1,48 @@
+<div class="container" id="MyContainer">
+  
+
+<div class="card w-50 my-centered">
+  <div class="card-header"><h4>Log In</h4></div>
+
+  <div class="card-block">
+    <!--<h4 class="card-title">Log In</h4>-->
+    
+    <p class="card-text">Insert username and password.</p>
+    
+    <div class="form-group">
+      <label for="exampleInputUSer1">Username</label>
+      <input [(ngModel)]="InUser" type="email" class="form-control" id="exampleInputUSer1" placeholder="Enter username">
+    </div>
+    
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input [(ngModel)]="InPwd" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+    </div>
+
+    <hr>
+
+    <div class="text-right">
+      <button (click)="goLogIn()" class="btn btn-primary text-center"  [innerHTML]="TxtButton"></button>
+    </div>
+
+
+
+<!--
+
+<input [(ngModel)]="hero.name" placeholder="name"/>
+    </div>
+    <button (click)="goBack()">Back</button>
+
+-->
+  </div>
+</div>
+
+<div *ngIf="error" id="errorMessage">
+  <ngb-alert type="danger" (close)="closeAlert()">{{ error }}</ngb-alert>
+</div>
+
+<div class="fixed-bottom bg-primary text-white text-center">
+  <small><u>&nbsp;&nbsp;o000o&nbsp;&nbsp;UI Demo&nbsp;&nbsp;o000o&nbsp;&nbsp;</u>  => Powered by Angular + Bootstrap 4 <=</small>
+</div>
+
+</div>

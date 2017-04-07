@@ -1,0 +1,30 @@
+.fa {
+  width:2em;
+}
+.nav {
+  margin-bottom: 20px;
+}
+.nav-item {
+  width: 100%;
+}
+
+.nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.nav-link {
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+/*
+.nav-item {
+  border:1px solid #FF0000;
+}
+.nav-link {
+  border:1px solid #000000;
+}
+.fa-adjust {
+  border:1px solid #0000FF;
+}
+*/

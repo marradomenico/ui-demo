@@ -1,0 +1,43 @@
+#myContainer {
+  position:fixed;
+  top:57px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  box-sizing:border-box;
+  /*border:2px solid #FF0000;*/
+  margin:0px;
+  padding:0px;
+}
+#mySidebar {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  width:18%;
+  box-sizing:border-box;
+  /*border:2px solid #0000FF;*/
+  margin:0px;
+  padding:0px;
+  overflow: hidden;
+  border-right: 1px solid #DDDDDD;
+  background-color: #EEEEEE;
+}
+#myDashboard {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:18%;
+  right:0px;
+  box-sizing:border-box;
+  /*border:2px solid #FF0000;*/
+  margin:0px;
+  padding:1em;
+  overflow-y: auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}

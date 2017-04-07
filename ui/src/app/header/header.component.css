@@ -1,0 +1,7 @@
+div {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    border: 3px solid #00FFFF;
+    overflow: visible;
+}

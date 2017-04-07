@@ -1,0 +1,50 @@
+<nav class="navbar navbar-toggleable-sm navbar-inverse fixed-top bg-inverse">
+      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="navbar-brand">
+        <img src="/assets/image/logo/bootstrap-solid.svg" width="30" height="30" alt="">
+        <!--<i class="fa fa-tachometer" aria-hidden="true"></i>-->
+        Dashboard
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+          <div *ngFor="let menuItem of MenuItemsSevr.menuItems" >
+            
+            <div *ngIf="! menuItem.subItems" class="nav-item">
+              <button class="nav-link btn btn-outline-secondary"
+              (click)="selectMenuItem(menuItem);"
+              [class.myActive]="menuItem.selected"
+              >
+                <i *ngIf="menuItem.faIcon" class="fa {{menuItem.faIcon}}" aria-hidden="true"></i>
+                <span *ngIf="menuItem.text">{{menuItem.text}}</span>
+              </button>
+            </div>
+          
+            <div *ngIf="menuItem.subItems" class="nav-item" ngbDropdown>
+              <button class="nav-link btn btn-outline-secondary" id="dropdownMenu1"
+              ngbDropdownToggle
+              [class.myActive]="menuItem.selected"
+              >
+                <i *ngIf="menuItem.faIcon" class="fa {{menuItem.faIcon}}" aria-hidden="true"></i>
+                <span *ngIf="menuItem.text">{{menuItem.text}}</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <button *ngFor="let subMenuItem of menuItem.subItems" class="dropdown-item"
+                (click)="selectSubMenuItem(menuItem,subMenuItem);"
+                >
+                  <i *ngIf="subMenuItem.faIcon" class="fa {{subMenuItem.faIcon}}" aria-hidden="true"></i>
+                  <span *ngIf="subMenuItem.text">{{subMenuItem.text}}</span>
+                </button>
+              </div>
+            </div>
+          
+          
+          
+          </div>
+    
+      </div>
+</nav>

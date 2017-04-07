@@ -1,0 +1,15 @@
+<router-outlet name="menu"></router-outlet>
+<div id="myContainer">
+
+  <div id="mySidebar" [@sidebarState]="sidebarStateExp">
+    <div class="clearfix">
+      <button (click)="goToggle()" hover-pointer class="btn btn-secondary float-right"><i class="fa {{sidebarStateIcon}}" aria-hidden="true"></i></button>
+    </div>
+    <router-outlet name="sidebar"></router-outlet>
+  </div>
+  
+  <div id="myDashboard" [@contentState]="contentStateExp">
+    <router-outlet name="content"></router-outlet>  
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item" *ngFor="let sideItem of SidebarItemsServ.sidebarItems">
+      <a class="nav-link"
+        [class.active]="sideItem.selected"
+        (click)="selectItem(sideItem);"
+        click-stop-propagation
+      href="#">
+        <i class="fa {{sideItem.faIcon}}" aria-hidden="true"></i>
+        <span>{{sideItem.text}}</span>
+      </a>
+    </li>
+</ul>
